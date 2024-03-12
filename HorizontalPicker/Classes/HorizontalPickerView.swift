@@ -141,7 +141,7 @@ public class HorizontalPickerView: UIView {
     private func adjust(with delegate: HorizontalPickerViewDelegate?, dataSource: HorizontalPickerViewDataSource?) {
         guard let delegate = delegate, let dataSource = dataSource, isInitialized == false else { return }
 
-        collectionController.font = delegate.textFontForHorizontalPickerView?(pickerView: self) ?? UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        collectionController.font = delegate.textFontForHorizontalPickerView?(pickerView: self) ?? UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
         collectionController.textColor = delegate.textColorForHorizontalPickerView?(pickerView: self) ?? UIColor.lightGray
         collectionController.useTwoLineMode = delegate.useTwoLineModeForHorizontalPickerView?(pickerView: self) ?? false
 
